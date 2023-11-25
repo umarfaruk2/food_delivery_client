@@ -1,14 +1,14 @@
 import React from 'react';
 import Header from '../../components/Header';
-import Banner from './Banner';
 import TopBanner from './TopBanner';
+import Speciality from './Speciality';
 
 const Home = () => {
     return (
         <div>
             <Header />
-            {/* <Banner /> */}
             <TopBanner />
+            <Speciality />
         </div>
     );
 };
