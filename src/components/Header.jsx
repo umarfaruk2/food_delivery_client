@@ -47,9 +47,9 @@ const Header = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <Link to="/sign-up" className="flex items-center hover:text-orange-800">
           Sign-up
-        </a>
+        </Link>
       </Typography>
       <Typography
         as="li"
@@ -57,9 +57,9 @@ const Header = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <Link to='/login' className="flex items-center hover:text-orange-800">
           Login 
-        </a>
+        </Link>
       </Typography>
       <Typography
         as="li"
