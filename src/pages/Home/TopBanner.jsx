@@ -8,9 +8,9 @@ const CarouselWithContent = () => {
     <Carousel
       className=""
       navigation={false}
-      // autoplay={true}
-      // autoplayDelay={5000}
-      // loop={true}
+      autoplay={true}
+      autoplayDelay={5000}
+      loop={true}
     >
       <div className="relative h-[500px] w-full">
         <img

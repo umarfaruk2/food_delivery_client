@@ -29,7 +29,11 @@ module.exports = withMT({
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
     },
-    extend: {},
+    extend: {
+       backgroundImage: {
+        'bottom-header': "url('/src/assets/images/page-header.jpg')",
+      }
+    },
   },
   plugins: [],
 });
