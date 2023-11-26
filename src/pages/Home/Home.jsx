@@ -3,6 +3,7 @@ import Header from '../../components/Header';
 import TopBanner from './TopBanner';
 import Speciality from './Speciality';
 import FoodItems from './FoodItems';
+import Footer from './Footer';
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
             <TopBanner />
             <Speciality />
             <FoodItems />
+            <Footer />
         </div>
     );
 };

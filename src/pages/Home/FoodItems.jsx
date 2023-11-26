@@ -47,7 +47,7 @@ const data = [
 
 const FoodItems = () => {
   return (
-    <div className="mb-10 mt-20">
+    <div className="mb-10 mt-28">
       <h3 className="text-center font-bold text-xl">DELICIOUS FOOD</h3>
       <p className="border-2 border-b-orange-900 w-48 mx-auto"></p>
 
@@ -63,7 +63,7 @@ const FoodItems = () => {
 
 
       {/* hod deal section */}
-      <div className="bg-bottom-header  bg-cover bg-center h-72 mt-12">
+      <div className="bg-bottom-header  bg-cover bg-center h-72 mt-20">
         <div className="bg-[#000000b2] w-full h-full flex justify-center items-center">
 
       <div className="text-white text-center space-y-3">

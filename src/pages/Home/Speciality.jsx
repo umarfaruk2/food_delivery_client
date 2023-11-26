@@ -7,7 +7,7 @@ import { TbDiscount2 } from "react-icons/tb";
 const Speciality = () => {
   return (
     <>
-      <h3 className="text-center mt-10 font-bold text-xl">OUR SPECIALITIES</h3>
+      <h3 className="text-center mt-14 font-bold text-xl">OUR SPECIALITIES</h3>
       <p className="border-2 border-b-orange-900 w-48 mx-auto"></p>
 
       <div className="my-12 flex justify-between mx-32 md:mx-40 items-center">
