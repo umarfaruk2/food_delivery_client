@@ -8,13 +8,18 @@ import {
   Avatar,
   Tooltip,
 } from "@material-tailwind/react";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const MapFoodItem = (props) => {
-    const {image, title, description, price} = props.item;
-    console.log(title, description)
+    const {id, image, title, description, price} = props.item;
+    const navigate = useNavigate()
+    console.log('id', id)
+    const food_detail = () => {
+      navigate('/food_detail/'+id)
+    }
+
     return (
-        <Card className="overflow-hidden">
+        <Card className="overflow-hidden cursor-pointer" onClick={food_detail}>
           <CardHeader
             floated={false}
             shadow={false}

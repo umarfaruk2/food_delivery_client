@@ -12,6 +12,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Home from './pages/Home/Home';
 import SignUp from './pages/Account/SignUp';
 import Login from './pages/Account/Login';
+import FoodDetail from './components/FoodDetail';
 
 
 const router = createBrowserRouter([
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: '/login',
     element: <Login />
+  },
+  {
+    path: '/food_detail/:id',
+    element: <FoodDetail />
   }
 ]);
 

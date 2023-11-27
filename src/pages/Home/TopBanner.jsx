@@ -4,6 +4,7 @@ import banner from '../../assets/images/banner111.jpg';
 import banner2 from '../../assets/images/banner1.jpg';
 
 const CarouselWithContent = () => {
+  console.log(localStorage.getItem('access_key'), localStorage.getItem('refresh_key')) 
   return (
     <Carousel
       className=""

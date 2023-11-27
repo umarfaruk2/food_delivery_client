@@ -8,36 +8,42 @@ import { Link } from "react-router-dom";
 
 const data = [
   {
+    'id': 1,
     'image': food1,
     'title': 'dish',
     'description': 'best food Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, iste.',
     'price': 322
   },
   {
+    'id': 2,
     'image': food2,
     'title': 'dish 2',
     'description': 'best food 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, iste.',
     'price': 982
   },
   {
+    'id': 3,
     'image': food3,
     'title': 'new food 2',
     'description': 'icon food Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, iste.',
     'price': 833
   }, 
   {
+    'id': 4,
     'image': food4,
     'title': 'bangla food',
     'description': 'icon Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, iste.',
     'price': 993
   },
   {
+    'id': 5,
     'image': food3,
     'title': 'new food 2',
     'description': 'icon food Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, iste.',
     'price': 833
   },
   {
+    'id': 6,
     'image': food1,
     'title': 'dish',
     'description': 'best food Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, iste.',
@@ -46,12 +52,13 @@ const data = [
 ]
 
 const FoodItems = () => {
+  
   return (
     <div className="mb-10 mt-28">
       <h3 className="text-center font-bold text-xl">DELICIOUS FOOD</h3>
       <p className="border-2 border-b-orange-900 w-48 mx-auto"></p>
 
-      <div className="grid grid-flow-row lg:grid-cols-3 md:grid-cols-2 gap-8 lg:mx-20 mx-10 my-10 cursor-pointer">
+      <div className="grid grid-flow-row lg:grid-cols-3 md:grid-cols-2 gap-8 lg:mx-20 mx-10 my-10">
         {
           data.map(item => <MapFoodItem item = {item} />)
         }

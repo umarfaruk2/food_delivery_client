@@ -11,6 +11,13 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   const [openNav, setOpenNav] = React.useState(false);
+  const [check, setCheck] = React.useState(false)
+
+  const userLogout = () => {
+    localStorage.removeItem("access_key");
+    localStorage.removeItem("refresh_key");
+    setCheck(!check)
+  };
 
   React.useEffect(() => {
     window.addEventListener(
@@ -31,46 +38,72 @@ const Header = () => {
           Home
         </Link>
       </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="#" className="flex items-center">
-          Dashboard
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <Link to="/sign-up" className="flex items-center hover:text-orange-800">
-          Sign-up
-        </Link>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <Link to='/login' className="flex items-center hover:text-orange-800">
-          Login 
-        </Link>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="#" className="flex items-center">
-          Logout
-        </a>
-      </Typography>
+      {localStorage.getItem("access_key") && (
+        <>
+          <Typography
+            as="li"
+            variant="small"
+            color="blue-gray"
+            className="p-1 font-normal"
+          >
+            <Link to="#" className="flex items-center">
+              Dashboard
+            </Link>
+          </Typography>
+          <Typography
+            as="li"
+            variant="small"
+            color="blue-gray"
+            className="p-1 font-normal"
+          >
+            <Link to="#" className="flex items-center">
+              Profile
+            </Link>
+          </Typography>
+        </>
+      )}
+      {!localStorage.getItem("access_key") && (
+        <>
+          <Typography
+            as="li"
+            variant="small"
+            color="blue-gray"
+            className="p-1 font-normal"
+          >
+            <Link
+              to="/sign-up"
+              className="flex items-center hover:text-orange-800"
+            >
+              Sign-up
+            </Link>
+          </Typography>
+          <Typography
+            as="li"
+            variant="small"
+            color="blue-gray"
+            className="p-1 font-normal"
+          >
+            <Link
+              to="/login"
+              className="flex items-center hover:text-orange-800"
+            >
+              Login
+            </Link>
+          </Typography>
+        </>
+      )}
+      {localStorage.getItem("access_key") && (
+        <Typography
+          as="li"
+          variant="small"
+          color="blue-gray"
+          className="p-1 font-normal"
+        >
+          <Link href="#" onClick={userLogout} className="flex items-center">
+            Logout
+          </Link>
+        </Typography>
+      )}
     </ul>
   );
 
@@ -83,7 +116,7 @@ const Header = () => {
             href="#"
             className="mr-4 text-2xl cursor-pointer py-1.5 font-bold"
           >
-           Food Hub 
+            Food Hub
           </Typography>
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
