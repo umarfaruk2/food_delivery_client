@@ -6,6 +6,9 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { ThemeProvider } from "@material-tailwind/react";
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 import Home from './pages/Home/Home';
 import SignUp from './pages/Account/SignUp';
 import Login from './pages/Account/Login';
@@ -31,6 +34,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
         <ThemeProvider>
             <RouterProvider router={router} />
+            <ToastContainer />
         </ThemeProvider>
   </React.StrictMode>,
 )
