@@ -34,7 +34,7 @@ const Header = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <Link to="#" className="flex items-center">
+        <Link to="/" className="flex items-center">
           Home
         </Link>
       </Typography>
@@ -116,7 +116,9 @@ const Header = () => {
             href="#"
             className="mr-4 text-2xl cursor-pointer py-1.5 font-bold"
           >
-            Food Hub
+            <Link to='/'>
+              Food Hub
+            </Link>
           </Typography>
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>

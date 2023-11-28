@@ -7,13 +7,13 @@ import {
   Typography,
   Avatar,
   Tooltip,
+  Rating
 } from "@material-tailwind/react";
 import { Link, useNavigate } from 'react-router-dom';
 
 const MapFoodItem = (props) => {
     const {id, image, title, description, price} = props.item;
     const navigate = useNavigate()
-    console.log('id', id)
     const food_detail = () => {
       navigate('/food_detail/'+id)
     }
@@ -43,11 +43,13 @@ const MapFoodItem = (props) => {
             >
                <span className='font-bold'>Description</span>: {description}
             </Typography>
+            <Rating value={4} readonly className='my-2' />
             <Typography
               variant="p"
               color="gray"
               className="font-normal"
             >
+
               <span className='font-bold'>Price</span>: {price}
             </Typography>
           </CardBody>

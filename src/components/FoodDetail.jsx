@@ -1,11 +1,12 @@
 import React from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import Header from "./Header";
 import food1 from "../assets/images/food-1.jpg";
+import { Rating } from "@material-tailwind/react";
 
 const FoodDetail = () => {
   const { id } = useParams();
-  console.log(id);
+  const navigate = useNavigate();
 
   const dish = {
     id: 1,
@@ -15,6 +16,14 @@ const FoodDetail = () => {
       "best food Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, iste.",
     price: 322,
   };
+
+  const redirectToLogin = () => {
+    if(localStorage.getItem('access_key')) {
+
+    } else {
+      navigate('/login')
+    }
+  } 
   return (
     <div>
       <Header />
@@ -24,7 +33,8 @@ const FoodDetail = () => {
         <h3 className="mt-8 text-xl font-bold">{dish.title}</h3>
         <p className="my-3 text-gray-700">{dish.description}</p>
         <p className="mb-3 text-sm"><span className="font-bold">Restaurant</span>: <span className="text-cyan-800 font-bold rounded-md">New Food House</span></p>
-        <p className="font-bold">$ {dish.price}</p>
+        <Rating value={4} readonly />
+        <p className="font-bold mt-2">$ {dish.price}</p>
         <div className="flex space-x-4 mt-6">
           <Link className="bg-blue-800 text-white py-1 px-2 rounded-md" to="#">
             <small>Add To Cart</small>
@@ -36,11 +46,11 @@ const FoodDetail = () => {
       </div>
 
       {/* user review and rating */}
-      <div className="mx-14 mt-10 mb-8">4
+      <div className="mx-14 mt-10 mb-8">
         <h4 className="text-center font-bold text-xl">User Review and Rating</h4>
         <p className="border-2 border-b-orange-900 w-64 mx-auto"></p>
-
-        <button className="text-bold text-white bg-orange-900 py-1 px-3 rounded-md">Add A Review</button>
+        
+        <button className="text-bold text-white bg-orange-900 py-1 px-3 rounded-md" onClick={redirectToLogin}>Add A Review</button>
       </div>
     </div>
   );

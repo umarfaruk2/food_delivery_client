@@ -20,6 +20,7 @@ const Login = () => {
     password: "",
   });
 
+
   const backToHome = () => {
     navigate("/");
   };
