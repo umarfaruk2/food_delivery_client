@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Header from "../../components/Header";
 import { Input, Button } from "@material-tailwind/react";
-import { Range } from "react-range";
 import food1 from '../../assets/images/food-1.jpg';
 import food2 from '../../assets/images/food-2.jpg';
 import food3 from '../../assets/images/food-3.jpg';

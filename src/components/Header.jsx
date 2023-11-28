@@ -34,7 +34,7 @@ const Header = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <Link to="/" className="flex items-center">
+        <Link to="/" className="flex items-center hover:text-orange-800">
           Home
         </Link>
       </Typography>
@@ -46,7 +46,7 @@ const Header = () => {
             color="blue-gray"
             className="p-1 font-normal"
           >
-            <Link to="#" className="flex items-center">
+            <Link to="/dashboard" className="flex items-center hover:text-orange-800">
               Dashboard
             </Link>
           </Typography>
@@ -56,7 +56,7 @@ const Header = () => {
             color="blue-gray"
             className="p-1 font-normal"
           >
-            <Link to="#" className="flex items-center">
+            <Link to="#" className="flex items-center hover:text-orange-800">
               Profile
             </Link>
           </Typography>

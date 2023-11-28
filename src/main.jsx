@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Children } from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import {
@@ -14,6 +14,7 @@ import SignUp from './pages/Account/SignUp';
 import Login from './pages/Account/Login';
 import FoodDetail from './components/FoodDetail';
 import AllFood from './pages/AllFood/AllFood';
+import Sidebar from './pages/Dashboard/Sidebar';
 
 
 const router = createBrowserRouter([
@@ -36,6 +37,15 @@ const router = createBrowserRouter([
   {
     path: '/all-food',
     element: <AllFood />
+  },
+  {
+    path: '/dashboard',
+    element: <Sidebar />,
+    // Children: [
+    //   {
+    //     path: ''
+    //   }
+    // ]
   }
 ]);
 
