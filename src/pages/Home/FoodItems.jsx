@@ -65,7 +65,7 @@ const FoodItems = () => {
       </div>
 
       <div className="text-center">
-        <Link className="bg-orange-900 py-2 px-5 rounded-full text-white">See All Food</Link>
+        <Link to='/all-food' className="bg-orange-900 py-2 px-5 rounded-full text-white">See All Food</Link>
       </div>
 
 
