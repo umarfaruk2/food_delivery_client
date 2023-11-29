@@ -5,7 +5,7 @@ const Sidebar = () => {
   return (
     <section className="grid grid-flow-row md:grid-cols-5 grid-cols-1">
       {/* dashboard sidebar */}
-      <div className="bg-gray-700 md:h-screen md:py-0 py-5">
+      <div className="bg-gray-700 md:h-auto md:py-0 py-5">
         <div className="md:mt-10 ml-10">
           <ul className="md:space-y-5 space-y-3">
             <li className="text-white flex items-center space-x-2">
@@ -28,7 +28,7 @@ const Sidebar = () => {
             </li>
             <li className="text-white flex items-center space-x-2">
               {/* <AiOutlineUsergroupAdd />{" "} */}
-              <Link to="" className="text-lg">
+              <Link to="/dashboard/manage-dish" className="text-lg">
                 Manage Dish
               </Link>
             </li>

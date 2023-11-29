@@ -15,6 +15,8 @@ import Login from './pages/Account/Login';
 import FoodDetail from './components/FoodDetail';
 import AllFood from './pages/AllFood/AllFood';
 import Sidebar from './pages/Dashboard/Sidebar';
+import CreateDish from './pages/Dashboard/CreateDish';
+import ManageDish from './pages/Dashboard/ManageDish';
 
 
 const router = createBrowserRouter([
@@ -41,11 +43,16 @@ const router = createBrowserRouter([
   {
     path: '/dashboard',
     element: <Sidebar />,
-    // Children: [
-    //   {
-    //     path: ''
-    //   }
-    // ]
+    children: [
+      {
+        path: '',
+        element: <CreateDish />
+      },
+      {
+        path: 'manage-dish',
+        element: <ManageDish />
+      }
+    ]
   }
 ]);
 
